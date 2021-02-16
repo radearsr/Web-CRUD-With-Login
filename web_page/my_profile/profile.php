@@ -104,6 +104,7 @@ if (isset($_POST['change-passwd'])){
                                     </div>
                                 </div>
                             </div>
+                            <!-- Form Untuk Kolom Ovo -->
                             <div class="form-group">
                                 <label for="ovo">OVO</label>
                                 <input type="text" name="ovo" id="ovo" class="form-control" value="<?php echo $user_data['ovo'];?>">
