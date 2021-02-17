@@ -47,28 +47,41 @@ session_start();
                 <div class="menu_section">
                   <ul class="nav side-menu">
                     <!-- Bar Menu KE-1 -->
-                    <li>
+                    <!-- <li>
                     <a href="index_data.php?page=tmp_utama"><i class="fa fa-home"></i>DEMAK<span class="fa fa-chevron"></span></a>
-                    </li>    
-                    <!-- Bar Menu KE-2 -->
-                    <li>
-                    <a href="index_data.php?page=tmp_utama"><i class="fa fa-home"></i>VILA DAGO<span class="fa fa-chevron"></span></a>
-                    </li> 
-                    <!-- Bar Menu KE-3 -->
-                    <li>
-                    <a href="index_data.php?page=tmp_utama"><i class="fa fa-home"></i>PETOMPON<span class="fa fa-chevron"></span></a>
-                    </li> 
-                    <!-- Bar Menu KE-4 -->
-                    <li>
-                    <a href="index_data.php?page=tmp_utama"><i class="fa fa-home"></i>BANDUNG<span class="fa fa-chevron"></span></a>
-                    </li>               
-                    <!-- Bar Menu KE-5 -->
-                    <!-- <li><a href="#"><i class="fa fa-table"></i> Management Data <span class="fa fa-chevron-down"></span></a>
+                    </li>                 -->
+
+                    <!-- Bar Menu KE-1(Revisi) -->
+                    <li><a href="#"><i class="fa fa-table"></i> DEMAK <span class="fa fa-chevron-down"></span></a>
                       <ul class="nav child_menu">
                         <li><a href="index_data.php?page=tambah_data">Tambah Data</a></li>
                         <li><a href="index_data.php?page=tmp_revisi">Revisi Data</a></li>
                       </ul>
-                    </li> -->
+                    </li>
+
+                    <!-- Bar Menu KE-2(Revisi) -->
+                    <li><a href="#"><i class="fa fa-table"></i> VILA DAGO <span class="fa fa-chevron-down"></span></a>
+                      <ul class="nav child_menu">
+                        <li><a href="index_data.php?page=tambah_data">Tambah Data</a></li>
+                        <li><a href="index_data.php?page=tmp_revisi">Revisi Data</a></li>
+                      </ul>
+                    </li>
+
+                    <!-- Bar Menu KE-3(Revisi) -->
+                    <li><a href="#"><i class="fa fa-table"></i> PETOMPON <span class="fa fa-chevron-down"></span></a>
+                      <ul class="nav child_menu">
+                        <li><a href="index_data.php?page=tambah_data">Tambah Data</a></li>
+                        <li><a href="index_data.php?page=tmp_revisi">Revisi Data</a></li>
+                      </ul>
+                    </li>
+
+                    <!-- Bar Menu KE-4(Revisi) -->
+                    <li><a href="#"><i class="fa fa-table"></i> BANDUNG <span class="fa fa-chevron-down"></span></a>
+                      <ul class="nav child_menu">
+                        <li><a href="index_data.php?page=tambah_data">Tambah Data</a></li>
+                        <li><a href="index_data.php?page=tmp_revisi">Revisi Data</a></li>
+                      </ul>
+                    </li>
 
                   </ul>
                 </div>
