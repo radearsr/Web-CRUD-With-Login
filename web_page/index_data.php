@@ -47,9 +47,9 @@ session_start();
                 <div class="menu_section">
                   <ul class="nav side-menu">
                     <!-- Bar Menu KE-1 -->
-                    <!-- <li>
-                    <a href="index_data.php?page=tmp_utama"><i class="fa fa-home"></i>DEMAK<span class="fa fa-chevron"></span></a>
-                    </li>                 -->
+                    <li>
+                    <a href="index_data.php?page=tmp_utama"><i class="fa fa-home"></i>All Data<span class="fa fa-chevron"></span></a>
+                    </li>                
 
                     <!-- Bar Menu KE-1(Revisi) -->
                     <li><a href="#"><i class="fa fa-table"></i> DEMAK <span class="fa fa-chevron-down"></span></a>
