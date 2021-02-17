@@ -62,7 +62,7 @@ session_start();
                     <!-- Bar Menu KE-2(Revisi) -->
                     <li><a href="#"><i class="fa fa-table"></i> VILA DAGO <span class="fa fa-chevron-down"></span></a>
                       <ul class="nav child_menu">
-                        <li><a href="index_data.php?page=tambah_data">Tambah Data</a></li>
+                        <li><a href="index_data.php?page=tmbh_dt_vila">Tambah Data</a></li>
                         <li><a href="index_data.php?page=tmp_revisi">Revisi Data</a></li>
                       </ul>
                     </li>
@@ -160,6 +160,11 @@ session_start();
         // Tambah data Berdasarkan Alamat(Demak)
       	case 'tmbh_dt_demak':
       		include 'add_data/1_demak/tmbh_demak.php';
+          break;
+
+        // Tambah data Berdasarkan Alamat(Vila Dago)
+      	case 'tmbh_dt_vila':
+      		include 'add_data/2_vila/tmbh_vila.php';
           break;
 
         // Edit data Berdasarkan Alamat(User)
