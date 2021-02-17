@@ -54,7 +54,7 @@ session_start();
                     <!-- Bar Menu KE-1(Revisi) -->
                     <li><a href="#"><i class="fa fa-table"></i> DEMAK <span class="fa fa-chevron-down"></span></a>
                       <ul class="nav child_menu">
-                        <li><a href="index_data.php?page=tambah_data">Tambah Data</a></li>
+                        <li><a href="index_data.php?page=tmbh_dt_demak">Tambah Data</a></li>
                         <li><a href="index_data.php?page=tmp_revisi">Revisi Data</a></li>
                       </ul>
                     </li>
@@ -147,40 +147,48 @@ session_start();
       parse_str($_SERVER['QUERY_STRING'], $queries);
       error_reporting(E_ALL ^ (E_NOTICE | E_WARNING));
       switch ($queries['page']) {
+        // Tampilan Data(View Only Mode)
       	case 'tmp_utama':
-      		# code...
       		include 'tmp_data_utama.php';
-      		break;
+          break;
+
+        // Tampilan Data(Edit Mode)
         case 'tmp_revisi':
-          # code...
           include 'tmp_data_revisi.php';
           break;
-      	case 'tambah_data':
-      		# code...
-      		include 'tambah.php';
-      		break;
+
+        // Tambah data Berdasarkan Alamat(Demak)
+      	case 'tmbh_dt_demak':
+      		include 'add_data/1_demak/tmbh_demak.php';
+          break;
+
+        // Edit data Berdasarkan Alamat(User)
         case 'edit_dt_user':
-        		# code...
         	include 'edit_user.php';
-        	break;
+          break;
+
+        // Edit data Berdasarkan Alamat(Admin)
         case 'edit_dt_admin':
-          		# code...
           include 'edit_admin.php';
           break;
+
+        // Login Untuk Edit Data(Admin)
         case 'login_admn':
-              # code...
           include 'login/login_admin.php';
           break;
+
+        // Menu/Page Untuk Edit Profile Pribadi
         case 'my_profile':
-            # code...
           include 'my_profile/profile.php';
           break;
+
+        // Melihat Profile Semua User Yang Telah Mendaftar
         case 'monitoring_user':
-            # code...
           include 'monitoring/monitor_user.php';
           break;
+
+        // Tampilan Pertama Saat Setelah Login
         default:
-		          #code...
 		      include 'home.php';
 		      break;
         }

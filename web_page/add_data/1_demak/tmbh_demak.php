@@ -9,13 +9,13 @@
 	  <br /><br />
 	  <div class="container">
 	   <br />
-	   <h1 align="center">Tambah Data</h1>
+	   <h1 align="center">Tambah Data(Demak)</h1>
 	   <br />
 	   <div class="table-responsive">
 	    <table class="table table-bordered" id="crud_table">
 	     <tr>
 	      <th>Nama Joki</th>
-	      <th>Penerima</th>
+	      <!-- <th>Penerima</th> -->
 	      <th>Merchant</th>
 	      <th>Barang</th>
 	      <th>Jumlah</th>
@@ -25,7 +25,7 @@
 	     </tr>
 	     <tr>
 	      <td contenteditable="true" class="item_name"></td>
-	      <td contenteditable="true" class="item_code"></td>
+	      <!-- <td contenteditable="true" class="item_code"></td> -->
 	      <td contenteditable="true" class="item_desc"></td>
 	      <td contenteditable="true" class="item_price"></td>
 	      <td contenteditable="true" class="item_joki"></td>
@@ -56,7 +56,7 @@
 	  count = count + 1;
 	  var html_code = "<tr id='row"+count+"'>";
 	   html_code += "<td contenteditable='true' class='item_name'></td>";
-	   html_code += "<td contenteditable='true' class='item_code'></td>";
+	//    html_code += "<td contenteditable='true' class='item_code'></td>";
 	   html_code += "<td contenteditable='true' class='item_desc'></td>";
 	   html_code += "<td contenteditable='true' class='item_price'></td>";
 	   html_code += "<td contenteditable='true' class='item_joki'></td>";
@@ -74,7 +74,7 @@
 	 
 	 $('#save').click(function(){
 	  var item_name = [];
-	  var item_code = [];
+	//   var item_code = [];
 	  var item_desc = [];
 	  var item_price = [];
 	  var item_joki = [];
@@ -84,9 +84,9 @@
 	  $('.item_name').each(function(){
 	   item_name.push($(this).text());
 	  });
-	  $('.item_code').each(function(){
-	   item_code.push($(this).text());
-	  });
+	//   $(.item_code).each(function(){
+	//    item_code.push($(this).text());
+	//   });
 	  $('.item_desc').each(function(){
 	   item_desc.push($(this).text());
 	  });
@@ -104,9 +104,9 @@
 	  });
 
 	  $.ajax({
-	   url:"konek_tambah.php",
+	   url:"add_data/1_demak/konek_tmbh_demak.php",
 	   method:"POST",
-	   data:{item_name:item_name, item_code:item_code, item_desc:item_desc, item_price:item_price, item_joki:item_joki, item_barang:item_barang, item_harga:item_harga},
+	   data:{item_name:item_name, item_desc:item_desc, item_price:item_price, item_joki:item_joki, item_barang:item_barang, item_harga:item_harga},
 	   success:function(data){
 	    alert(data);
 	    $("td[contentEditable='true']").text("");
