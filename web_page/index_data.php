@@ -78,7 +78,7 @@ session_start();
                     <!-- Bar Menu KE-4(Revisi) -->
                     <li><a href="#"><i class="fa fa-table"></i> BANDUNG <span class="fa fa-chevron-down"></span></a>
                       <ul class="nav child_menu">
-                        <li><a href="index_data.php?page=tambah_data">Tambah Data</a></li>
+                        <li><a href="index_data.php?page=tmbh_dt_bandung">Tambah Data</a></li>
                         <li><a href="index_data.php?page=tmp_revisi">Revisi Data</a></li>
                       </ul>
                     </li>
@@ -170,6 +170,11 @@ session_start();
         // Tambah data Berdasarkan Alamat(Petompon)
       	case 'tmbh_dt_petompon':
       		include 'add_data/3_petompon/tmbh_petompon.php';
+          break;
+
+        // Tambah data Berdasarkan Alamat(Bandung)
+      	case 'tmbh_dt_bandung':
+      		include 'add_data/4_bandung/tmbh_bandung.php';
           break;
 
         // Edit data Berdasarkan Alamat(User)
