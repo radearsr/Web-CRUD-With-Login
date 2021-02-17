@@ -7,7 +7,7 @@ include('konek_all_dt.php');
 	<div class="container" style="margin-top:20px">
 		<center><font size="6">Data Hasil Tembak</font></center>
 		<hr>
-		<a href="index_data.php?page=tambah_data"><button class="btn btn-dark right">Tambah Data</button></a>
+		<!-- <a href="index_data.php?page=tambah_data"><button class="btn btn-dark right">Tambah Data</button></a> -->
 		<div class="table-responsive">
 		<table class="table table-striped jambo_table bulk_action">
 			<thead>
