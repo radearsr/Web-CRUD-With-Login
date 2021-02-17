@@ -46,23 +46,29 @@ session_start();
               <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
                 <div class="menu_section">
                   <ul class="nav side-menu">
-                    <!-- Bar Menu Pertama -->
+                    <!-- Bar Menu KE-1 -->
                     <li>
-                    <a href="index_data.php?page=tmp_utama"><i class="fa fa-home"></i>Tampilan Data<span class="fa fa-chevron"></span></a>
-                    </li>
-                    <a href="index_data.php?page=tmp_utama"><i class="fa fa-home"></i>Tampilan Data<span class="fa fa-chevron"></span></a>
-                    </li>
-                    <a href="index_data.php?page=tmp_utama"><i class="fa fa-home"></i>Tampilan Data<span class="fa fa-chevron"></span></a>
-                    </li>
-                    <a href="index_data.php?page=tmp_utama"><i class="fa fa-home"></i>Tampilan Data<span class="fa fa-chevron"></span></a>
-                    </li>                    
-                    <!-- Bar Menu Kedua -->
-                    <li><a href="#"><i class="fa fa-table"></i> Management Data <span class="fa fa-chevron-down"></span></a>
+                    <a href="index_data.php?page=tmp_utama"><i class="fa fa-home"></i>DEMAK<span class="fa fa-chevron"></span></a>
+                    </li>    
+                    <!-- Bar Menu KE-2 -->
+                    <li>
+                    <a href="index_data.php?page=tmp_utama"><i class="fa fa-home"></i>VILA DAGO<span class="fa fa-chevron"></span></a>
+                    </li> 
+                    <!-- Bar Menu KE-3 -->
+                    <li>
+                    <a href="index_data.php?page=tmp_utama"><i class="fa fa-home"></i>PETOMPON<span class="fa fa-chevron"></span></a>
+                    </li> 
+                    <!-- Bar Menu KE-4 -->
+                    <li>
+                    <a href="index_data.php?page=tmp_utama"><i class="fa fa-home"></i>BANDUNG<span class="fa fa-chevron"></span></a>
+                    </li>               
+                    <!-- Bar Menu KE-5 -->
+                    <!-- <li><a href="#"><i class="fa fa-table"></i> Management Data <span class="fa fa-chevron-down"></span></a>
                       <ul class="nav child_menu">
                         <li><a href="index_data.php?page=tambah_data">Tambah Data</a></li>
                         <li><a href="index_data.php?page=tmp_revisi">Revisi Data</a></li>
                       </ul>
-                    </li>
+                    </li> -->
 
                   </ul>
                 </div>
