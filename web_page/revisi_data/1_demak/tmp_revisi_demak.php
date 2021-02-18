@@ -43,7 +43,7 @@ include('../../konek_all_dt.php');
 							<td>'.$data['fee'].'</td>
 							<td>'.$data['resi'].'</td>					
 							<td>
-								<a href="index_data.php?page=login_admn&id='.$data['id'].'" class="btn btn-secondary btn-sm">Admin</a>
+								<a href="index_data.php?page=login_admn&id='.$data['id'].'&dt=dmk" class="btn btn-secondary btn-sm">Admin</a>
 								<a href="index_data.php?page=rvs_demak_user&id='.$data['id'].'" class="btn btn-secondary btn-sm">User</a>
 								<a href="delete.php?id='.$data['id'].'" class="btn btn-danger btn-sm" onclick="return confirm(\'Yakin ingin menghapus data ini?\')">Delete</a>
 							</td>

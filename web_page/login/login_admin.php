@@ -10,6 +10,7 @@ session_start();
   {
     //something was posted
     $id = $_GET['id'];
+    $dt = $_GET['dt'];
     $username = $_POST['username'];
     $password = $_POST['password'];
 
@@ -27,12 +28,36 @@ session_start();
 
           $data_admin = mysqli_fetch_assoc($result);
           
-          if($data_admin['password'] === $password)
+          if($data_admin['password'] === $password && $dt == 'dmk')
           {
 
             $_SESSION['id'] = $data_admin['id'];
             echo "<center><h1>KLIK LANJUT UNTUK EDIT</h1></center>";
             echo "<center><a class='btn btn-success' href='index_data.php?page=rvs_demak_admin&id=".$id."'>LANJUT</a></center>";           
+            die;
+          }
+          elseif($data_admin['password'] === $password && $dt == 'vila')
+          {
+
+            $_SESSION['id'] = $data_admin['id'];
+            echo "<center><h1>KLIK LANJUT UNTUK EDIT</h1></center>";
+            echo "<center><a class='btn btn-success' href='index_data.php?page=rvs_vila_admin&id=".$id."'>LANJUT</a></center>";           
+            die;
+          }
+          elseif($data_admin['password'] === $password && $dt == 'petompon')
+          {
+
+            $_SESSION['id'] = $data_admin['id'];
+            echo "<center><h1>KLIK LANJUT UNTUK EDIT</h1></center>";
+            echo "<center><a class='btn btn-success' href='index_data.php?page=rvs_petompon_admin&id=".$id."'>LANJUT</a></center>";           
+            die;
+          }
+          elseif($data_admin['password'] === $password && $dt == 'bandung')
+          {
+
+            $_SESSION['id'] = $data_admin['id'];
+            echo "<center><h1>KLIK LANJUT UNTUK EDIT</h1></center>";
+            echo "<center><a class='btn btn-success' href='index_data.php?page=rvs_bandung_admin&id=".$id."'>LANJUT</a></center>";           
             die;
           }
         }
