@@ -152,9 +152,9 @@ session_start();
       		include 'tmp_data_utama.php';
           break;
 
-        // Tampilan Data(Edit Mode)
-        case 'tmp_revisi':
-          include 'tmp_data_revisi.php';
+        // Tambah data Berdasarkan Alamat(Demak)
+      	case 'tmbh_dt_demak':
+      		include 'add_data/1_demak/tmbh_demak.php';
           break;
 
         // Edit data Berdasarkan Alamat(Demak)
@@ -168,11 +168,6 @@ session_start();
           include 'revisi_data/1_demak/edi_demak_admin.php';
           break;
           
-
-        // Tambah data Berdasarkan Alamat(Demak)
-      	case 'tmbh_dt_demak':
-      		include 'add_data/1_demak/tmbh_demak.php';
-          break;
 
         // Tambah data Berdasarkan Alamat(Vila Dago)
       	case 'tmbh_dt_vila':
@@ -189,11 +184,6 @@ session_start();
       		include 'add_data/4_bandung/tmbh_bandung.php';
           break;
 
-        // Edit data Berdasarkan Alamat(User)
-        case 'edit_dt_user':
-        	include 'edit_user.php';
-          break;
-
         // Edit data Berdasarkan Alamat(Admin)
         case 'edit_dt_admin':
           include 'edit_admin.php';
@@ -204,7 +194,7 @@ session_start();
           include 'login/login_admin.php';
           break;
 
-        // Menu/Page Untuk Edit Profile Pribadi
+        //Page Untuk Edit Profile Pribadi
         case 'my_profile':
           include 'my_profile/profile.php';
           break;
