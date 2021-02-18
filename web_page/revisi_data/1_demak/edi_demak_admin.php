@@ -50,7 +50,7 @@
 		}
 		?>
 
-		<form action="index_data.php?page=edit_dt_admin&id=<?php echo $id; ?>" method="post">
+		<form action="index_data.php?page=rvs_demak_admin&id=<?php echo $id; ?>" method="post">
 			<!-- Menampilkan ID Tanpa Bisa diEdit -->
 			<div class="item form-group">
 				<label class="col-form-label col-md-3 col-sm-3 label-align">ID</label>

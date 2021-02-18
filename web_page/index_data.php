@@ -63,7 +63,7 @@ session_start();
                     <li><a href="#"><i class="fa fa-table"></i> VILA DAGO <span class="fa fa-chevron-down"></span></a>
                       <ul class="nav child_menu">
                         <li><a href="index_data.php?page=tmbh_dt_vila">Tambah Data</a></li>
-                        <li><a href="index_data.php?page=tmp_revisi">Revisi Data</a></li>
+                        <li><a href="index_data.php?page=tmp_rvs_vila">Revisi Data</a></li>
                       </ul>
                     </li>
 
@@ -71,7 +71,7 @@ session_start();
                     <li><a href="#"><i class="fa fa-table"></i> PETOMPON <span class="fa fa-chevron-down"></span></a>
                       <ul class="nav child_menu">
                         <li><a href="index_data.php?page=tmbh_dt_petompon">Tambah Data</a></li>
-                        <li><a href="index_data.php?page=tmp_revisi">Revisi Data</a></li>
+                        <li><a href="index_data.php?page=tmp_rvs_petompon">Revisi Data</a></li>
                       </ul>
                     </li>
 
@@ -79,7 +79,7 @@ session_start();
                     <li><a href="#"><i class="fa fa-table"></i> BANDUNG <span class="fa fa-chevron-down"></span></a>
                       <ul class="nav child_menu">
                         <li><a href="index_data.php?page=tmbh_dt_bandung">Tambah Data</a></li>
-                        <li><a href="index_data.php?page=tmp_revisi">Revisi Data</a></li>
+                        <li><a href="index_data.php?page=tmp_rvs_bandung">Revisi Data</a></li>
                       </ul>
                     </li>
 
@@ -174,9 +174,31 @@ session_start();
       		include 'add_data/2_vila/tmbh_vila.php';
           break;
 
+        // Edit data Berdasarkan Alamat(Vila Dago)
+        case 'tmp_rvs_vila':
+          include 'revisi_data/2_vila/tmp_revisi_vila.php';
+          break;
+        case 'rvs_vila_user':
+          include 'revisi_data/2_vila/edi_vila_user.php';
+          break;
+        case 'rvs_vila_admin':
+          include 'revisi_data/2_vila/edi_vila_admin.php';
+          break;
+
         // Tambah data Berdasarkan Alamat(Petompon)
       	case 'tmbh_dt_petompon':
       		include 'add_data/3_petompon/tmbh_petompon.php';
+          break;
+
+        // Edit data Berdasarkan Alamat(Petompon)
+        case 'tmp_rvs_petompon':
+          include 'revisi_data/3_petompon/tmp_revisi_petompon.php';
+          break;
+        case 'rvs_petompon_user':
+          include 'revisi_data/3_petompon/edi_petompon_user.php';
+          break;
+        case 'rvs_petompon_admin':
+          include 'revisi_data/3_petompon/edi_petompon_admin.php';
           break;
 
         // Tambah data Berdasarkan Alamat(Bandung)
@@ -184,9 +206,15 @@ session_start();
       		include 'add_data/4_bandung/tmbh_bandung.php';
           break;
 
-        // Edit data Berdasarkan Alamat(Admin)
-        case 'edit_dt_admin':
-          include 'edit_admin.php';
+        // Edit data Berdasarkan Alamat(Bandung)
+        case 'tmp_rvs_bandung':
+          include 'revisi_data/4_bandung/tmp_revisi_bandung.php';
+          break;
+        case 'rvs_bandung_user':
+          include 'revisi_data/4_bandung/edi_bandung_user.php';
+          break;
+        case 'rvs_bandung_admin':
+          include 'revisi_data/4_bandung/edi_bandung_admin.php';
           break;
 
         // Login Untuk Edit Data(Admin)

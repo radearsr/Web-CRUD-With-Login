@@ -32,7 +32,7 @@ session_start();
 
             $_SESSION['id'] = $data_admin['id'];
             echo "<center><h1>KLIK LANJUT UNTUK EDIT</h1></center>";
-            echo "<center><a class='btn btn-success' href='index_data.php?page=edit_dt_admin&id=".$id."'>LANJUT</a></center>";           
+            echo "<center><a class='btn btn-success' href='index_data.php?page=rvs_demak_admin&id=".$id."'>LANJUT</a></center>";           
             die;
           }
         }

@@ -1,4 +1,4 @@
-<?php include('konek_all_dt.php'); ?>
+<?php include('../../konek_all_dt.php'); ?>
 
 
 	<div class="container" style="margin-top:20px">
@@ -50,7 +50,7 @@
 		}
 		?>
 
-		<form action="index_data.php?page=edit_dt_admin&id=<?php echo $id; ?>" method="post">
+		<form action="index_data.php?page=rvs_vila_admin&id=<?php echo $id; ?>" method="post">
 			<!-- Menampilkan ID Tanpa Bisa diEdit -->
 			<div class="item form-group">
 				<label class="col-form-label col-md-3 col-sm-3 label-align">ID</label>
@@ -125,7 +125,7 @@
 			<div class="item form-group">
 				<div class="col-md-6 col-sm-6 offset-md-3">
 					<input type="submit" name="submit" class="btn btn-primary" value="Simpan">
-					<a href="index_data.php?page=tmp_revisi" class="btn btn-warning">Kembali</a>
+					<a href="index_data.php?page=tmp_rvs_vila" class="btn btn-warning">Kembali</a>
 				</div>
 			</div>
 		</form>
