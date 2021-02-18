@@ -55,7 +55,7 @@ session_start();
                     <li><a href="#"><i class="fa fa-table"></i> DEMAK <span class="fa fa-chevron-down"></span></a>
                       <ul class="nav child_menu">
                         <li><a href="index_data.php?page=tmbh_dt_demak">Tambah Data</a></li>
-                        <li><a href="index_data.php?page=tmp_revisi">Revisi Data</a></li>
+                        <li><a href="index_data.php?page=tmp_rvs_demak">Revisi Data</a></li>
                       </ul>
                     </li>
 
@@ -147,7 +147,7 @@ session_start();
       parse_str($_SERVER['QUERY_STRING'], $queries);
       error_reporting(E_ALL ^ (E_NOTICE | E_WARNING));
       switch ($queries['page']) {
-        // Tampilan Data(View Only Mode)
+        // Tampilan Data(Mode View Only)
       	case 'tmp_utama':
       		include 'tmp_data_utama.php';
           break;
@@ -156,6 +156,18 @@ session_start();
         case 'tmp_revisi':
           include 'tmp_data_revisi.php';
           break;
+
+        // Edit data Berdasarkan Alamat(Demak)
+        case 'tmp_rvs_demak':
+          include 'revisi_data/1_demak/tmp_revisi_demak.php';
+          break;
+        case 'rvs_demak_user':
+          include 'revisi_data/1_demak/edi_demak_user.php';
+          break;
+        case 'rvs_demak_admin':
+          include 'revisi_data/1_demak/edi_demak_admin.php';
+          break;
+          
 
         // Tambah data Berdasarkan Alamat(Demak)
       	case 'tmbh_dt_demak':

@@ -1,4 +1,4 @@
-<?php include('konek_all_dt.php'); ?>
+<?php include('../../konek_all_dt.php'); ?>
 
 
 	<div class="container" style="margin-top:20px">
