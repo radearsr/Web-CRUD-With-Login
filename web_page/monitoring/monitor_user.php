@@ -99,6 +99,7 @@
                       </table>
                     </div>
                     <div class="modal-footer">
+                      <a type="button" class="btn btn-warning" href="#">Data</a>
                       <button type="button" class="btn btn-warning" data-dismiss="modal">Close</button>
                     </div>
                   </div>

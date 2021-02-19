@@ -22,7 +22,7 @@ include('konek_all_dt.php');
 			</thead>
 			<tbody>
 				<?php
-				//query ke database SELECT tabel mahasiswa urut berdasarkan id yang paling besar
+				//query ke database SELECT tabel hasil Tembak urut berdasarkan id yang paling besar
 				$sql = mysqli_query($koneksi, "SELECT * FROM `hasiltembak` ORDER BY `hasiltembak`.`nmalamat` ASC") or die(mysqli_error($koneksi));
 				//jika query diatas menghasilkan nilai > 0 maka menjalankan script di bawah if...
 				if(mysqli_num_rows($sql) > 0){
