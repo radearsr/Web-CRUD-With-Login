@@ -12,7 +12,6 @@ include('konek_all_dt.php');
 		<table class="table table-striped jambo_table bulk_action">
 			<thead>
 				<tr>
-					<th>Nama Joki</th>
 					<th>Merchant</th>
 					<th>Barang</th>
 					<th>Jumlah</th>
@@ -34,7 +33,6 @@ include('konek_all_dt.php');
 						//menampilkan data perulangan
 						echo '
 						<tr>
-							<td>'.$data['joki'].'</td>
 							<td>'.$data['merchant'].'</td>
 							<td>'.$data['barang'].'</td>
 							<td>'.$data['jumlah'].'</td>

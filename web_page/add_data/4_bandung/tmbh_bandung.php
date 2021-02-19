@@ -14,7 +14,7 @@
 	   <div class="table-responsive">
 	    <table class="table table-bordered" id="crud_table">
 	     <tr>
-	      <th>Nama Joki</th>
+	      <th style='display:none'>Nama Joki</th>
 	      <!-- <th>Penerima</th> -->
 	      <th>Merchant</th>
 	      <th>Barang</th>
@@ -24,7 +24,7 @@
 	      <th></th>
 	     </tr>
 	     <tr>
-	      <td contenteditable="true" class="item_name"></td>
+	      <td style='display:none' class="item_name"><?php echo $user_data['nama_lengkap']; ?></td>
 	      <!-- <td contenteditable="true" class="item_code"></td> -->
 	      <td contenteditable="true" class="item_desc"></td>
 	      <td contenteditable="true" class="item_price"></td>
@@ -55,7 +55,7 @@
 	 $('#add').click(function(){
 	  count = count + 1;
 	  var html_code = "<tr id='row"+count+"'>";
-	   html_code += "<td contenteditable='true' class='item_name'></td>";
+	   html_code += "<td style='display:none' class='item_name'><?php echo $user_data['nama_lengkap']; ?></td>";
 	//    html_code += "<td contenteditable='true' class='item_code'></td>";
 	   html_code += "<td contenteditable='true' class='item_desc'></td>";
 	   html_code += "<td contenteditable='true' class='item_price'></td>";
