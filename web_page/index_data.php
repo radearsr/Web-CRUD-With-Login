@@ -48,7 +48,7 @@ session_start();
                   <ul class="nav side-menu">
                     <!-- Bar Menu KE-1 -->
                     <li>
-                    <a href="index_data.php?page=tmp_utama"><i class="fa fa-home"></i>All Data<span class="fa fa-chevron"></span></a>
+                    <a href="index_data.php?page=tmp_utama"><i class="fa fa-home"></i>Semua Data<span class="fa fa-chevron"></span></a>
                     </li>                
 
                     <!-- Bar Menu KE-1(Revisi) -->

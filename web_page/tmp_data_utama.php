@@ -13,7 +13,6 @@ include('konek_all_dt.php');
 			<thead>
 				<tr>
 					<th>Nama Joki</th>
-					<th>Alamat</th>
 					<th>Merchant</th>
 					<th>Barang</th>
 					<th>Jumlah</th>
@@ -36,7 +35,6 @@ include('konek_all_dt.php');
 						echo '
 						<tr>
 							<td>'.$data['joki'].'</td>
-							<td>'.$data['nmalamat'].'</td>
 							<td>'.$data['merchant'].'</td>
 							<td>'.$data['barang'].'</td>
 							<td>'.$data['jumlah'].'</td>
