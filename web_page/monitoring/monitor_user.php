@@ -48,68 +48,71 @@
 
 <!--Tampilan Pop Up untuk Lihat Detail -->
 <?php
-          $sql = mysqli_query($con, "SELECT * FROM `users` ORDER BY `nama_lengkap` ASC") or die(mysqli_error($con));
-          if (mysqli_num_rows($sql) > 0) {
-            $no = 1;
-            while($data = mysqli_fetch_assoc($sql)){
-              echo '
-              <div id="add_data_Modal'.$no.'" class="modal fade">
-                <div class="modal-dialog">
-                  <div class="modal-content">
+    $sql = mysqli_query($con, "SELECT * FROM `users` ORDER BY `nama_lengkap` ASC") or die(mysqli_error($con));
+    if (mysqli_num_rows($sql) > 0) {
+      $no = 1;
+      while($data = mysqli_fetch_assoc($sql)){
+        echo '
+          <form action="index_data.php?page=result_user" method="post">
+            <input type="hidden" name="info"  value="'.$data['nama_lengkap'].'">
+            <input type="hidden" name="num"  value="'.$no.'">
+            <div id="add_data_Modal'.$no.'" class="modal fade">
+              <div class="modal-dialog">
+                <div class="modal-content">
 
-                    <div class="modal-header">  
-                      <h4 class="modal-title">Info Profile</h4>
-                      <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    </div>
-                
-                    <div class="modal-body">
-                      <table class="table table-bordered">
-                        <tr>
-                          <td width="30%"><label>TGL DAFTAR</label></td>  
-                          <td width="70%">'.$data['date'].'</td>
-                        </tr>                        
-                        <tr>
-                          <td width="30%"><label>NAMA LENGKAP</label></td>  
-                          <td width="70%">'.$data['nama_lengkap'].'</td>
-                        </tr>
-                        <tr>
-                          <td width="30%"><label>EMAIL</label></td>  
-                          <td width="70%">'.$data['email'].'</td>
-                        </tr>  
-                        <tr>
-                          <td width="30%"><label>BANK</label></td>  
-                          <td width="70%">('.$data['bank'].')'.$data['no_akun'].'</td>
-                        </tr>  
-                        <tr>
-                          <td width="30%"><label>NAMA AKUN</label></td>  
-                          <td width="70%">'.$data['nm_akun'].'</td>
-                        </tr>   
-                        <tr>
-                          <td width="30%"><label>OVO</label></td>  
-                          <td width="70%">'.$data['ovo'].'</td>
-                        </tr>
-                        <tr>
-                          <td width="30%"><label>GOPAY</label></td>  
-                          <td width="70%">'.$data['gopay'].'</td>
-                        </tr>
-                        <tr>
-                          <td width="30%"><label>DANA</label></td>  
-                          <td width="70%">'.$data['dana'].'</td>
-                        </tr>            
-                      </table>
-                    </div>
-                    <div class="modal-footer">
-                      <a type="button" class="btn btn-warning" href="#">Data</a>
-                      <button type="button" class="btn btn-warning" data-dismiss="modal">Close</button>
-                    </div>
+                  <div class="modal-header">  
+                    <h4 class="modal-title">Info Profile</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                  </div>
+              
+                  <div class="modal-body">
+                    <table class="table table-bordered">
+                      <tr>
+                        <td width="30%"><label>TGL DAFTAR</label></td>  
+                        <td width="70%">'.$data['date'].'</td>
+                      </tr>                        
+                      <tr>
+                        <td width="30%"><label>NAMA LENGKAP</label></td>  
+                        <td width="70%">'.$data['nama_lengkap'].'</td>
+                      </tr>
+                      <tr>
+                        <td width="30%"><label>EMAIL</label></td>  
+                        <td width="70%">'.$data['email'].'</td>
+                      </tr>  
+                      <tr>
+                        <td width="30%"><label>BANK</label></td>  
+                        <td width="70%">('.$data['bank'].')'.$data['no_akun'].'</td>
+                      </tr>  
+                      <tr>
+                        <td width="30%"><label>NAMA AKUN</label></td>  
+                        <td width="70%">'.$data['nm_akun'].'</td>
+                      </tr>   
+                      <tr>
+                        <td width="30%"><label>OVO</label></td>  
+                        <td width="70%">'.$data['ovo'].'</td>
+                      </tr>
+                      <tr>
+                        <td width="30%"><label>GOPAY</label></td>  
+                        <td width="70%">'.$data['gopay'].'</td>
+                      </tr>
+                      <tr>
+                        <td width="30%"><label>DANA</label></td>  
+                        <td width="70%">'.$data['dana'].'</td>
+                      </tr>            
+                    </table>
+                  </div>
+                  <div class="modal-footer">
+                    
+                    <button type="submit" class="btn btn-success">Hasil Tembak</button>
+                    <button type="button" class="btn btn-warning" data-dismiss="modal">Close</button>
                   </div>
                 </div>
-             </div>
-            
-              ';
-              $no++;
+              </div>
+            </div>
+          </form>
+        ';
+        $no++;
+      }
 
-            }
-
-          }
+    }
 ?>

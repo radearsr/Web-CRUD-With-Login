@@ -230,7 +230,10 @@ session_start();
         case 'monitoring_user':
           include 'monitoring/monitor_user.php';
           break;
-
+        case 'result_user':
+          include 'monitoring/result_tembak_user.php';
+          break;
+          
         // Tampilan Pertama Saat Setelah Login
         default:
 		      include 'home.php';
