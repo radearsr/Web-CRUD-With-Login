@@ -5,9 +5,8 @@
 		$(document).ready(function(e){
 			// Variable Untuk Menambah Form
 			var html = '<p/><div class="form-inline"><tr><td><input type="hidden" name="alamat[]" value="<?php echo $_GET['dt'] ?>"></td><td><input type="hidden" name="joki[]" value="<?php echo $user_data['nama_lengkap']; ?>"></td><td style="display:none"><input type="hidden" name="level[]" value="<?php echo $user_data['level'] ?>"></td><td><select class="form-control" name="merchant[]" id="childmerchant"><option value="Pilih">Pilih</option><option value="Lazada">Lazada</option><option value="Mi Store">Mi Store</option><option value="Jd.Id">Jd.Id</option></select></td><td><select class="form-control" name="barang[]" id="barang"><option value="Pilih">Pilih Barang</option><?php 
-								$konek_data = mysqli_connect("localhost", "root", "", "mydata");
-
-								$sql = mysqli_query($konek_data, "SELECT * FROM `barang`") or die(mysqli_error($konek_data));
+								include '../../config.php';
+								$sql = mysqli_query($koneksi, "SELECT * FROM `barang`") or die(mysqli_error($koneksi));
 								if(mysqli_num_rows($sql) > 0){
 									while($data = mysqli_fetch_assoc($sql)){
 										echo'<option value="'.$data['nama_barang'].'">'.$data['nama_barang'].'</option>';	
