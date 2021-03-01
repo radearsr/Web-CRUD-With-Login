@@ -154,7 +154,7 @@ session_start();
 
         // Tambah data Berdasarkan Alamat(Demak)
       	case 'tmbh_dt_Demak':
-      		include 'add_data/1_demak/tmbh_demak.php';
+      		include 'add_data/add_data_admin.php';
           break;
         // Edit data
         case 'tmp_rvs_Demak':
@@ -164,7 +164,7 @@ session_start();
 
         // Tambah data Berdasarkan Alamat(Vila Dago)
       	case 'tmbh_dt_Vila':
-      		include 'add_data/2_vila/tmbh_vila.php';
+      		include 'add_data/add_data_admin.php';
           break;
         // Edit data
         case 'tmp_rvs_Vila':
@@ -174,7 +174,7 @@ session_start();
 
         // Tambah data Berdasarkan Alamat(Petompon)
       	case 'tmbh_dt_Petompon':
-      		include 'add_data/3_petompon/tmbh_petompon.php';
+      		include 'add_data/add_data_admin.php';
           break;
         // Edit data
         case 'tmp_rvs_Petompon':
@@ -184,7 +184,7 @@ session_start();
 
         // Tambah data Berdasarkan Alamat(Bandung)
       	case 'tmbh_dt_Bandung':
-      		include 'add_data/4_bandung/tmbh_bandung.php';
+      		include 'add_data/add_data_admin.php';
           break;
         // Edit data
         case 'tmp_rvs_Bandung':
