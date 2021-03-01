@@ -1,9 +1,9 @@
 <html>  
- <head> 	  
+ <head> 	
  </head>  
  <body>
     <center>
-	 	<h1>Tambah Data (<?php echo $_GET['dt'] ?>)</h1>
+		<font size="6">Tambah Data(<?php echo $_GET['dt'] ?>)</font>
     </center>
 	<br>
 	<br>
