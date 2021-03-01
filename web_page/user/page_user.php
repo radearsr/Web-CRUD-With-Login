@@ -154,7 +154,7 @@ session_start();
           break;
         // Edit data
         case 'tmp_rvs_Demak':
-          include 'revisi_data/1_demak/tmp_revisi_demak.php';
+          include 'revisi_data/tmp_revisi_user.php';
           break;
         
 
@@ -164,7 +164,7 @@ session_start();
           break;
         // Edit data
         case 'tmp_rvs_Vila':
-          include 'revisi_data/2_vila/tmp_revisi_vila.php';
+          include 'revisi_data/tmp_revisi_user.php';
           break;
 
 
@@ -174,7 +174,7 @@ session_start();
           break;
         // Edit data
         case 'tmp_rvs_Petompon':
-          include 'revisi_data/3_petompon/tmp_revisi_petompon.php';
+          include 'revisi_data/tmp_revisi_user.php';
           break;
 
 
@@ -184,13 +184,13 @@ session_start();
           break;
         // Edit data
         case 'tmp_rvs_Bandung':
-          include 'revisi_data/4_bandung/tmp_revisi_bandung.php';
+          include 'revisi_data/tmp_revisi_user.php';
           break;
 
 
         // Script Proses Untuk Edit Data
         case 'rvs_data':
-          include 'revisi_data/edi_dt_admin.php';
+          include 'revisi_data/edi_dt_user.php';
           break; 
 
         //Page Untuk Edit Profile Pribadi
