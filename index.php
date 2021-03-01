@@ -28,12 +28,12 @@ session_start();
 					
 					if($user_data['password'] == $password && $user_data['level'] == 'admin'){
 						$_SESSION['user_id'] = $user_data['user_id'];
-						header("Location: web_page/admin/index_data.php");
+						header("Location: web_page/admin/page_admin.php");
 						die;
 					}
           elseif($user_data['password'] == $password && $user_data['level'] == 'user'){
             $_SESSION['user_id'] = $user_data['user_id'];
-            header("Location: web_page/user/index_data.php");
+            header("Location: web_page/user/page_user.php");
             die;
 
           }
