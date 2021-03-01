@@ -7,11 +7,7 @@
     </center>
 	<br>
 	<br>
-	<input type="button" name="view" value="List Barang" data-toggle="modal" data-target="#display_data" class="btn btn-primary " /> 
-	<input type="button" name="view" value="Tambah Barang" data-toggle="modal" data-target="#add_data_popup" class="btn btn-warning " />
-	<br>
 	<p></p>
-
 	<form class="insert-form" method="POST" action="../insert-data.php">
 		<div class="input_field">
 			<table class="table table-striped" id="table_field">
