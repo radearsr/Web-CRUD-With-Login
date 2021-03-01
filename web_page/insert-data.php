@@ -1,4 +1,4 @@
-<!-- Code Untuk Tambah Data -->
+<!-- Code Untuk Tambah Data Utama -->
 <?php 
 include ('config.php');
 
@@ -51,22 +51,27 @@ if(isset($_POST["submit"])){
 	if($query != ''){
 		if(mysqli_multi_query($koneksi, $query)){
 			echo '
-			<script>alert("Data Berhasil Masuk."); document.location="'.$level_clean.'/index_data.php?page=tmbh_dt_'.$alamat_clean.'&dt='.$alamat_clean.'";</script>
+			<script>alert("Data Berhasil Masuk."); document.location="'.$level_clean.'/page_'.$level_clean.'.php?page=tmbh_dt_'.$alamat_clean.'&dt='.$alamat_clean.'";</script>
 			';
 			
 		}else{
-			echo "Error";
+			echo '
+			<script>alert("ERROR"); document.location="'.$level_clean.'/page_'.$level_clean.'.php?page=tmbh_dt_'.$alamat_clean.'&dt='.$alamat_clean.'";</script>
+			';
 		}
 
 	}else{
-		echo "All Fields are Required";
+		echo '
+		<script>alert("All Fields are Required"); document.location="'.$level_clean.'/page_'.$level_clean.'.php?page=tmbh_dt_'.$alamat_clean.'&dt='.$alamat_clean.'";</script>		
+
+		';
 	}
 }
 
  ?>
 
 
-<!-- Code Untuk Tambah Data -->
+<!-- Code Untuk Tambah Nama Barang -->
 <?php 
 include ('config.php');
 
@@ -93,15 +98,19 @@ if(isset($_POST["input_barang"])){
 	if($query != ''){
 		if(mysqli_multi_query($koneksi, $query)){
 			echo '
-			<script>alert("Data Berhasil Masuk."); document.location="'.$level_clean.'/index_data.php?page=tmbh_dt_'.$alamat_clean.'&dt='.$alamat_clean.'";</script>
+			<script>alert("Data Berhasil Masuk."); document.location="'.$level_clean.'/page_'.$level_clean.'.php?page=tmbh_dt_'.$alamat_clean.'&dt='.$alamat_clean.'";</script>
 			';
 			
 		}else{
-			echo "Error";
+			echo '
+			<script>alert("ERROR"); document.location="'.$level_clean.'/page_'.$level_clean.'.php?page=tmbh_dt_'.$alamat_clean.'&dt='.$alamat_clean.'";</script>
+			';
 		}
 
 	}else{
-		echo "All Fields are Required";
+		echo '
+		<script>alert("All Fields are Required"); document.location="'.$level_clean.'/page_'.$level_clean.'.php?page=tmbh_dt_'.$alamat_clean.'&dt='.$alamat_clean.'";</script>		
+		';
 	}
 }
 

@@ -4,13 +4,15 @@
 
 if(isset($user_data['user_id'])){
     // Membuat variabel $id untuk menyimpan data user id yang sedang aktif
-    $id = $user_data['user_id'];
+    $id      = $user_data['user_id'];
+    $gateway = $user_data['level'];
+    
     // query ke database SELECT tabel users berdasrkan id SESSION yang sedang aktif
     $select = mysqli_query($koneksi, "SELECT * FROM users WHERE user_id = '$id' ") or die(mysqli_error($koneksi));
 
     // jika hasil query == 0 maka error akan mucul
     if(mysqli_num_rows($select) == 0){
-        echo '<script>alert("ID tidak ditemukan di database."); document.location="../index_data.php?page=my_profile";</script>';
+        echo '<script>alert("ID tidak ditemukan di database."); document.location="../page_'.$gateway.'.php?page=my_profile";</script>';
     // jika hasil query > 0
     }else{
         // Membuat variable $data dan menyimpan data row dari query
@@ -79,7 +81,7 @@ if (isset($_POST['change-passwd'])){
         }
 
     }else {
-        echo '<script>alert(" Gagal(PASTIKAN ISI KOLOM PASSWORD DAN KONFIRMASI SAMA)."); document.location="index_data.php?page=my_profile";</script>';        
+        echo '<script>alert(" Gagal(PASTIKAN ISI KOLOM PASSWORD DAN KONFIRMASI SAMA)."); document.location="page_'.$gateway.'.php?page=my_profile";</script>';        
     }
 
 }

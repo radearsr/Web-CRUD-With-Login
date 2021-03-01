@@ -1,3 +1,4 @@
+<!-- Include Session Untuk Nama link -->
 <?php 
 session_start();
 
@@ -27,15 +28,15 @@ if(isset($_GET['id'])){
 		$del = mysqli_query($koneksi, "DELETE FROM hasiltembak WHERE id='$id'") or die(mysqli_error($koneksi));
 		if($del){
 			echo '
-			<script>alert("Berhasil menghapus data."); document.location="'.$level_gateway.'/index_data.php?page=tmp_rvs_'.$gateway.'&tmp='.$gateway.'";</script>';
+			<script>alert("Berhasil menghapus data."); document.location="'.$level_gateway.'/page_'.$level_gateway.'.php?page=tmp_rvs_'.$gateway.'&tmp='.$gateway.'";</script>';
 		}else{
-			echo '<script>alert("Gagal menghapus data."); document.location="'.$level_gateway.'/index_data.php?page=tmp_rvs_'.$gateway.'&tmp='.$gateway.'";</script>';
+			echo '<script>alert("Gagal menghapus data."); document.location="'.$level_gateway.'/page_'.$level_gateway.'.php?page=tmp_rvs_'.$gateway.'&tmp='.$gateway.'";</script>';
 		}
 	}else{
-		echo '<script>alert("ID tidak ditemukan di database."); document.location="'.$level_gateway.'/index_data.php?page=tmp_rvs_'.$gateway.'&tmp='.$gateway.'";</script>';
+		echo '<script>alert("ID tidak ditemukan di database."); document.location="'.$level_gateway.'/page_'.$level_gateway.'.php?page=tmp_rvs_'.$gateway.'&tmp='.$gateway.'";</script>';
 	}
 }else{
-	echo '<script>alert("ID tidak ditemukan di database."); document.location="'.$level_gateway.'/index_data.php?page=tmp_rvs_'.$gateway.'&tmp='.$gateway.'";</script>';
+	echo '<script>alert("ID tidak ditemukan di database."); document.location="'.$level_gateway.'/page_'.$level_gateway.'.php?page=tmp_rvs_'.$gateway.'&tmp='.$gateway.'";</script>';
 }
 
 ?>

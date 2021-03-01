@@ -1,4 +1,14 @@
-<?php include('../konek_all_dt.php'); ?>
+<!-- Include Session Untuk Nama link -->
+<?php 
+session_start();
+
+	include("config.php");
+	include("functions.php");
+
+	$user_data = check_login($koneksi);
+
+?>
+<?php include('../../config.php'); ?>
 
 
 	<div class="container" style="margin-top:20px">
@@ -10,7 +20,7 @@
 		//jika sudah mendapatkan parameter GET id dari URL
 		if(isset($_GET['id'])){
 			//membuat variabel $id untuk menyimpan id dari GET id di URL
-			$id = $_GET['id'];
+			$id 		  = $_GET['id']; 
 
 			//query ke database SELECT tabel mahasiswa berdasarkan id = $id
 			$select = mysqli_query($koneksi, "SELECT * FROM hasiltembak WHERE id='$id'") or die(mysqli_error($koneksi));
@@ -31,28 +41,29 @@
 
 		//jika tombol simpan di tekan/klik
 		if(isset($_POST['submit'])){
-			$id 		= $_POST['id']; 
-			$joki		= $_POST['joki'];
-			$alamat		= $_POST['alamat'];
-			$merchant	= $_POST['merchant'];
-			$barang		= $_POST['barang'];
-			$jumlah		= $_POST['jumlah']; 
-			$harga		= $_POST['harga'];
-			$fee		= $_POST['fee'];
-			$resi		= $_POST['resi'];
-			$gateway	= $_POST['gateway'];			
+			$id 		  = $_POST['id']; 
+			$joki		  = $_POST['joki'];
+			$alamat		  = $_POST['alamat'];
+			$merchant	  = $_POST['merchant'];
+			$barang		  = $_POST['barang'];
+			$jumlah		  = $_POST['jumlah']; 
+			$harga		  = $_POST['harga'];
+			$fee		  = $_POST['fee'];
+			$resi		  = $_POST['resi'];
+			$gateway	  = $_POST['gateway'];			
+			$link_gateway = $user_data['level'];
 
 			$sql = mysqli_query($koneksi, "UPDATE hasiltembak SET joki='$joki', nmalamat='$alamat', merchant='$merchant', barang='$barang', jumlah='$jumlah', harga='$harga', fee='$fee',resi='$resi' WHERE id='$id'") or die(mysqli_error($koneksi));
 
 			if($sql){
-				echo '<script>alert("Berhasil Mengedit data."); document.location="index_data.php?page=tmp_rvs_'.$gateway.'&tmp='.$gateway.'";</script>';
+				echo '<script>alert("Berhasil Mengedit data."); document.location="page_'$link_gateway'.php?page=tmp_rvs_'.$gateway.'&tmp='.$gateway.'";</script>';
 			}else{
 				echo '<div class="alert alert-warning">Gagal melakukan proses edit data.</div>';
 			}
 		}
 		?>
 
-		<form action="index_data.php?page=rvs_data&id=<?php echo $id; ?>" method="post">
+		<form action="page_<?php echo $link_gateway ?>.php?page=rvs_data&id=<?php echo $id ?>" method="post">
 			<!-- Menampilkan ID Tanpa Bisa diEdit -->
 			<div class="item form-group">
 				<label class="col-form-label col-md-3 col-sm-3 label-align">ID</label>
@@ -129,7 +140,7 @@
 			<div class="item form-group">
 				<div class="col-md-6 col-sm-6 offset-md-3">
 					<input type="submit" name="submit" class="btn btn-primary" value="Simpan">
-					<a href="index_data.php?page=tmp_rvs_demak" class="btn btn-warning">Kembali</a>
+					<a href="page_<?php echo $link_gateway ?>.php?page=tmp_rvs_demak" class="btn btn-warning">Kembali</a>
 				</div>
 			</div>
 		</form>
