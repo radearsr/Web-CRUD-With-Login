@@ -1,4 +1,4 @@
-<?php include('../konek_all_dt.php'); ?>
+<?php include('../config.php'); ?>
 
 
 	<div class="container" style="margin-top:20px">
@@ -45,14 +45,14 @@
 			$sql = mysqli_query($koneksi, "UPDATE hasiltembak SET joki='$joki', nmalamat='$alamat', merchant='$merchant', barang='$barang', jumlah='$jumlah', harga='$harga', fee='$fee',resi='$resi' WHERE id='$id'") or die(mysqli_error($koneksi));
 
 			if($sql){
-				echo '<script>alert("Berhasil Mengedit data."); document.location="index_data.php?page=tmp_rvs_'.$gateway.'&tmp='.$gateway.'";</script>';
+				echo '<script>alert("Berhasil Mengedit data."); document.location="page_'.$user_data['level'].'.php?page=tmp_rvs_'.$gateway.'&tmp='.$gateway.'";</script>';
 			}else{
 				echo '<div class="alert alert-warning">Gagal melakukan proses edit data.</div>';
 			}
 		}
 		?>
 
-		<form action="index_data.php?page=rvs_data&id=<?php echo $id; ?>" method="post">
+		<form action="page_<?php echo $user_data['level']?>.php?page=rvs_data&id=<?php echo $id; ?>" method="post">
 			<!-- Menampilkan ID Tanpa Bisa diEdit -->
 			<div class="item form-group">
 				<label class="col-form-label col-md-3 col-sm-3 label-align">ID</label>
@@ -129,7 +129,7 @@
 			<div class="item form-group">
 				<div class="col-md-6 col-sm-6 offset-md-3">
 					<input type="submit" name="submit" class="btn btn-primary" value="Simpan">
-					<a href="index_data.php?page=tmp_rvs_demak" class="btn btn-warning">Kembali</a>
+					<a href="page_<?php echo $user_data['level']?>.php?page=tmp_rvs_<?php echo $_GET['edi']?>&tmp=<?php echo $_GET['edi']?>" class="btn btn-warning">Kembali</a>
 				</div>
 			</div>
 		</form>
