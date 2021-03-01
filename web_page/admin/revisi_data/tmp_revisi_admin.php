@@ -37,8 +37,8 @@ include('../../config.php');
 						echo '
 						<tr>
 							<td style="display: none;">'.$data['joki'].'</td>
-							<td>'.$data['merchant'].' '.$data['date'].'</td>
-							<td>'.$data['barang'].'</td>
+							<td>'.$data['merchant'].'</td>
+							<td>'.$data['barang'].' ['.$data['date_input'].']</td>
 							<td>'.$data['jumlah'].'</td>
 							<td>'.$data['harga'].'</td>
 							<td>'.$data['fee'].'</td>
