@@ -3,7 +3,7 @@
  </head>  
  <body>
     <center>
-	 	<h1>Tambah Data (Demak)</h1>
+	 	<h1>Tambah Data (<?php echo $_GET['dt'] ?>)</h1>
     </center>
 	<br>
 	<br>
