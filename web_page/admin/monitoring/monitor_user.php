@@ -4,12 +4,9 @@
 
 <!DOCTYPE html>  
 <html>  
- <head>  
-  <script src="jquery.min.js"></script>  
-  <script src="bootstrap.min.js"></script>  
+ <head>   
  </head>  
  <body>  
- 
   <div class="container"> 
    <h1 align="center">Data Semua User</h1>  
    <br />  
@@ -43,7 +40,9 @@
     </div>
    </div>  
   </div>
- </body>  
+ </body>
+ <script src="jquery.min.js"></script>  
+<script src="bootstrap.min.js"></script>   
 </html>  
 
 <!--Tampilan Pop Up untuk Lihat Detail -->
@@ -53,7 +52,7 @@
       $no = 1;
       while($data = mysqli_fetch_assoc($sql)){
         echo '
-          <form action="index_data.php?page=result_user" method="post">
+          <form action="page_'.$user_data['level'].'.php?page=result_user" method="post">
             <input type="hidden" name="info"  value="'.$data['nama_lengkap'].'">
             <input type="hidden" name="num"  value="'.$no.'">
             <div id="add_data_Modal'.$no.'" class="modal fade">

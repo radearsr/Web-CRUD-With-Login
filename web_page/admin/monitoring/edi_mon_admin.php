@@ -19,7 +19,7 @@
 			if(mysqli_num_rows($select) == 0){
 				echo '	<div class="alert alert-danger">
   							ID tidak ada dalam database.
-  							<a type="button" href="index_data.php?page=monitoring_user" class="close">x
+  							<a type="button" href="page_'.$user_data['level'].'.php?page=monitoring_user" class="close">x
   							</a>
 						</div>';
 				// echo '<div class="alert alert-warning">ID tidak ada dalam database.</div>';
@@ -60,7 +60,7 @@
 		}
 		?>
 
-		<form action="index_data.php?page=edit_mntr&id=<?php echo $id; ?>" method="post">
+		<form action="page_<?php echo $user_data['level']?>.php?page=edit_mntr&id=<?php echo $id; ?>" method="post">
 			<!-- Menampilkan ID Tanpa Bisa diEdit -->
 			<div class="item form-group">
 				<label class="col-form-label col-md-3 col-sm-3 label-align">ID</label>
@@ -135,7 +135,7 @@
 			<div class="item form-group">
 				<div class="col-md-6 col-sm-6 offset-md-3">
 					<input type="submit" name="submit" class="btn btn-primary" value="Simpan">
-					<a href="index_data.php?page=monitoring_user" class="btn btn-warning">Kembali</a>
+					<a href="page_<?php echo $user_data['level']?>.php?page=monitoring_user" class="btn btn-warning">Kembali</a>
 				</div>
 			</div>
 		</form>

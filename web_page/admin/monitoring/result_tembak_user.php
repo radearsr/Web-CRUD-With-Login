@@ -5,7 +5,7 @@
       <center><font size="6">Hasil Tembak(<?php echo $_POST['info']?>)</font></center>
       <hr>
       <button class="btn btn-warning right" data-toggle="modal" data-target="#add_data_Modal<?php echo $_POST['num']?>">Rincian Profile</button>
-      <a href="index_data.php?page=monitoring_user"><button class="btn btn-primary right">Kembali Ke Daftar</button></a>
+      <a href="page_<?php echo $user_data['level'] ?>.php?page=monitoring_user"><button class="btn btn-primary right">Kembali Ke Daftar</button></a>
       <div class="table-responsive">
       <table class="table table-striped jambo_table bulk_action">
         <thead>
@@ -42,7 +42,7 @@
                 <td>'.$data['fee'].'</td>							
                 <td>'.$data['resi'].'</td>
                 <td>
-                  <a href="index_data.php?page=edit_mntr&id='.$data['id'].'" class="btn btn-secondary btn-sm">Edit</a>
+                  <a href="page_'.$user_data['level'].'.php?page=edit_mntr&id='.$data['id'].'" class="btn btn-secondary btn-sm">Edit</a>
                 </td>
               </tr>
               ';
