@@ -48,38 +48,38 @@ session_start();
                   <ul class="nav side-menu">
                     <!-- Bar Menu KE-1 -->
                     <li>
-                    <a href="index_data.php?page=tmp_utama"><i class="fa fa-home"></i>Semua Data<span class="fa fa-chevron"></span></a>
+                    <a href="page_user.php?page=tmp_utama"><i class="fa fa-home"></i>Semua Data<span class="fa fa-chevron"></span></a>
                     </li>                
 
                     <!-- Bar Menu KE-1(Revisi) -->
                     <li><a href="#"><i class="fa fa-table"></i> DEMAK <span class="fa fa-chevron-down"></span></a>
                       <ul class="nav child_menu">
-                        <li><a href="index_data.php?page=tmbh_dt_Demak&dt=Demak">Tambah Data</a></li>
-                        <li><a href="index_data.php?page=tmp_rvs_Demak&tmp=Demak">Revisi Data</a></li>
+                        <li><a href="page_user.php?page=tmbh_dt_Demak&dt=Demak">Tambah Data</a></li>
+                        <li><a href="page_user.php?page=tmp_rvs_Demak&tmp=Demak">Revisi Data</a></li>
                       </ul>
                     </li>
 
                     <!-- Bar Menu KE-2(Revisi) -->
                     <li><a href="#"><i class="fa fa-table"></i> VILA DAGO <span class="fa fa-chevron-down"></span></a>
                       <ul class="nav child_menu">
-                        <li><a href="index_data.php?page=tmbh_dt_Vila&dt=Vila">Tambah Data</a></li>
-                        <li><a href="index_data.php?page=tmp_rvs_Vila&tmp=Vila">Revisi Data</a></li>
+                        <li><a href="page_user.php?page=tmbh_dt_Vila&dt=Vila">Tambah Data</a></li>
+                        <li><a href="page_user.php?page=tmp_rvs_Vila&tmp=Vila">Revisi Data</a></li>
                       </ul>
                     </li>
 
                     <!-- Bar Menu KE-3(Revisi) -->
                     <li><a href="#"><i class="fa fa-table"></i> PETOMPON <span class="fa fa-chevron-down"></span></a>
                       <ul class="nav child_menu">
-                        <li><a href="index_data.php?page=tmbh_dt_Petompon&dt=Petompon">Tambah Data</a></li>
-                        <li><a href="index_data.php?page=tmp_rvs_Petompon&tmp=Petompon">Revisi Data</a></li>
+                        <li><a href="page_user.php?page=tmbh_dt_Petompon&dt=Petompon">Tambah Data</a></li>
+                        <li><a href="page_user.php?page=tmp_rvs_Petompon&tmp=Petompon">Revisi Data</a></li>
                       </ul>
                     </li>
 
                     <!-- Bar Menu KE-4(Revisi) -->
                     <li><a href="#"><i class="fa fa-table"></i> BANDUNG <span class="fa fa-chevron-down"></span></a>
                       <ul class="nav child_menu">
-                        <li><a href="index_data.php?page=tmbh_dt_Bandung&dt=Bandung">Tambah Data</a></li>
-                        <li><a href="index_data.php?page=tmp_rvs_Bandung&tmp=Bandung">Revisi Data</a></li>
+                        <li><a href="page_user.php?page=tmbh_dt_Bandung&dt=Bandung">Tambah Data</a></li>
+                        <li><a href="page_user.php?page=tmp_rvs_Bandung&tmp=Bandung">Revisi Data</a></li>
                       </ul>
                     </li>
 
@@ -125,7 +125,7 @@ session_start();
                     <img src='../assets/images/ft_profile.jpg'><?php echo $user_data['nama_lengkap'];?>
                   </a>
                   <div class="dropdown-menu dropdown-usermenu pull-right" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item"  href="index_data.php?page=my_profile"> Profile</a>
+                    <a class="dropdown-item"  href="page_user.php?page=my_profile"> Profile</a>
                     <a class="dropdown-item"  href="../../logout.php"><i class="fa fa-sign-out pull-right"></i> Log Out</a>
                   </div>
                 </li>
@@ -150,7 +150,7 @@ session_start();
 
         // Tambah data Berdasarkan Alamat(Demak)
       	case 'tmbh_dt_Demak':
-      		include 'add_data/1_demak/tmbh_demak.php';
+      		include 'add_data/add_data_user.php';
           break;
         // Edit data
         case 'tmp_rvs_Demak':
@@ -160,7 +160,7 @@ session_start();
 
         // Tambah data Berdasarkan Alamat(Vila Dago)
       	case 'tmbh_dt_Vila':
-      		include 'add_data/2_vila/tmbh_vila.php';
+      		include 'add_data/add_data_user.php';
           break;
         // Edit data
         case 'tmp_rvs_Vila':
@@ -170,7 +170,7 @@ session_start();
 
         // Tambah data Berdasarkan Alamat(Petompon)
       	case 'tmbh_dt_Petompon':
-      		include 'add_data/3_petompon/tmbh_petompon.php';
+      		include 'add_data/add_data_user.php';
           break;
         // Edit data
         case 'tmp_rvs_Petompon':
@@ -180,7 +180,7 @@ session_start();
 
         // Tambah data Berdasarkan Alamat(Bandung)
       	case 'tmbh_dt_Bandung':
-      		include 'add_data/4_bandung/tmbh_bandung.php';
+      		include 'add_data/add_data_user.php';
           break;
         // Edit data
         case 'tmp_rvs_Bandung':
@@ -188,7 +188,7 @@ session_start();
           break;
 
 
-        // Config Untuk Edit Data
+        // Script Proses Untuk Edit Data
         case 'rvs_data':
           include 'revisi_data/edi_dt_admin.php';
           break; 
@@ -196,17 +196,6 @@ session_start();
         //Page Untuk Edit Profile Pribadi
         case 'my_profile':
           include '../my_profile/profile.php';
-          break;
-
-        // Melihat Profile Semua User Yang Telah Mendaftar
-        case 'monitoring_user':
-          include 'monitoring/monitor_user.php';
-          break;
-        case 'result_user':
-          include 'monitoring/result_tembak_user.php';
-          break;
-        case 'edit_mntr':
-          include 'monitoring/edi_mon_admin.php';
           break;
           
         // Tampilan Pertama Saat Setelah Login
