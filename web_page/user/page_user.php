@@ -20,7 +20,7 @@ session_start();
     <meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="icon" href="../assets/images/icon_web.ico"/>
 
-    <title> Informasi Data Hasil Tembak </title>
+    <title>Info Hasil Tembak | <?php echo $user_data['nama_lengkap']?></title>
 
     <!-- Bootstrap -->
     <link href="../assets/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
