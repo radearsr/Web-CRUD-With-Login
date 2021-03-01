@@ -48,38 +48,38 @@ session_start();
                   <ul class="nav side-menu">
                     <!-- Bar Menu KE-1 -->
                     <li>
-                    <a href="index_data.php?page=tmp_utama"><i class="fa fa-home"></i>Semua Data<span class="fa fa-chevron"></span></a>
+                    <a href="page_admin.php?page=tmp_utama"><i class="fa fa-home"></i>Semua Data<span class="fa fa-chevron"></span></a>
                     </li>                
 
                     <!-- Bar Menu KE-1(Revisi) -->
                     <li><a href="#"><i class="fa fa-table"></i> DEMAK <span class="fa fa-chevron-down"></span></a>
                       <ul class="nav child_menu">
-                        <li><a href="index_data.php?page=tmbh_dt_Demak&dt=Demak">Tambah Data</a></li>
-                        <li><a href="index_data.php?page=tmp_rvs_Demak&tmp=Demak">Revisi Data</a></li>
+                        <li><a href="page_admin.php?page=tmbh_dt_Demak&dt=Demak">Tambah Data</a></li>
+                        <li><a href="page_admin.php?page=tmp_rvs_Demak&tmp=Demak">Revisi Data</a></li>
                       </ul>
                     </li>
 
                     <!-- Bar Menu KE-2(Revisi) -->
                     <li><a href="#"><i class="fa fa-table"></i> VILA DAGO <span class="fa fa-chevron-down"></span></a>
                       <ul class="nav child_menu">
-                        <li><a href="index_data.php?page=tmbh_dt_Vila&dt=Vila">Tambah Data</a></li>
-                        <li><a href="index_data.php?page=tmp_rvs_Vila&tmp=Vila">Revisi Data</a></li>
+                        <li><a href="page_admin.php?page=tmbh_dt_Vila&dt=Vila">Tambah Data</a></li>
+                        <li><a href="page_admin.php?page=tmp_rvs_Vila&tmp=Vila">Revisi Data</a></li>
                       </ul>
                     </li>
 
                     <!-- Bar Menu KE-3(Revisi) -->
                     <li><a href="#"><i class="fa fa-table"></i> PETOMPON <span class="fa fa-chevron-down"></span></a>
                       <ul class="nav child_menu">
-                        <li><a href="index_data.php?page=tmbh_dt_Petompon&dt=Petompon">Tambah Data</a></li>
-                        <li><a href="index_data.php?page=tmp_rvs_Petompon&tmp=Petompon">Revisi Data</a></li>
+                        <li><a href="page_admin.php?page=tmbh_dt_Petompon&dt=Petompon">Tambah Data</a></li>
+                        <li><a href="page_admin.php?page=tmp_rvs_Petompon&tmp=Petompon">Revisi Data</a></li>
                       </ul>
                     </li>
 
                     <!-- Bar Menu KE-4(Revisi) -->
                     <li><a href="#"><i class="fa fa-table"></i> BANDUNG <span class="fa fa-chevron-down"></span></a>
                       <ul class="nav child_menu">
-                        <li><a href="index_data.php?page=tmbh_dt_Bandung&dt=Bandung">Tambah Data</a></li>
-                        <li><a href="index_data.php?page=tmp_rvs_Bandung&tmp=Bandung">Revisi Data</a></li>
+                        <li><a href="page_admin.php?page=tmbh_dt_Bandung&dt=Bandung">Tambah Data</a></li>
+                        <li><a href="page_admin.php?page=tmp_rvs_Bandung&tmp=Bandung">Revisi Data</a></li>
                       </ul>
                     </li>
 
@@ -122,11 +122,11 @@ session_start();
               <ul class=" navbar-right">
                 <li class="nav-item dropdown open" >
                   <a href="#" class="user-profile dropdown-toggle" aria-haspopup="true" id="navbarDropdown" data-toggle="dropdown" aria-expanded="false">
-                    <img src='../assets/images/ft_profile.jpg'><?php echo $user_data['nama_lengkap'];?>
+                    <img src='../assets/images/ft_profile.webp'><?php echo $user_data['nama_lengkap'];?>
                   </a>
                   <div class="dropdown-menu dropdown-usermenu pull-right" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item"  href="index_data.php?page=my_profile"> Profile</a>
-                      <a class="dropdown-item"  href="index_data.php?page=monitoring_user">
+                    <a class="dropdown-item"  href="page_admin.php?page=my_profile"> Profile</a>
+                      <a class="dropdown-item"  href="page_admin.php?page=monitoring_user">
                         <span class="badge bg-red pull-right">100%</span>
                         <span>Monitoring</span>
                       </a>
