@@ -9,8 +9,8 @@
 	<br>
 	<p></p>
 	<form class="insert-form" method="POST" action="../insert-data.php">
-		<div class="input_field">
-			<table class="table table-striped" id="table_field">
+		<div class="table-responsive input_field">
+			<table class="table table-striped jambo_table bulk_action" id="table_field">
 				<tr>
 					<td><b>Merchant</b></td>
 					<td><b>Barang</b></td>
